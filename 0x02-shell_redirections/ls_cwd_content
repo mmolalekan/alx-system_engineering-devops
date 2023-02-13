@@ -1,0 +1,18 @@
+total 80
+drwxr-xr-x 2 muhaymin muhaymin  4096 Feb 13 16:48 .
+drwxr-xr-x 6 muhaymin muhaymin  4096 Feb 13 12:32 ..
+-rw------- 1 muhaymin muhaymin 12288 Feb 13 12:45 .1-confused_smiley.swp
+-rw------- 1 muhaymin muhaymin 12288 Feb 13 16:36 .swp
+-rwxr--r-- 1 muhaymin muhaymin    32 Feb 13 12:35 0-hello_world
+-rwxr--r-- 1 muhaymin muhaymin    28 Feb 13 12:02 1-confused_smiley
+-rwxr--r-- 1 muhaymin muhaymin    28 Feb 13 12:04 2-hellofile
+-rwxr--r-- 1 muhaymin muhaymin    39 Feb 13 12:15 3-twofiles
+-rwxr--r-- 1 muhaymin muhaymin    30 Feb 13 12:10 4-lastlines
+-rwxr--r-- 1 muhaymin muhaymin    29 Feb 13 12:15 5-firstlines
+-rwxr--r-- 1 muhaymin muhaymin    40 Feb 13 12:26 6-third_line
+-rwxr--r-- 1 muhaymin muhaymin    98 Feb 13 16:44 7-file
+-rwxr--r-- 1 muhaymin muhaymin    36 Feb 13 16:47 8-cwd_state
+-rw-r--r-- 1 muhaymin muhaymin    17 Feb 13 12:37 README.md
+-rw-r--r-- 1 muhaymin muhaymin    12 Feb 13 16:44 \*\\'"Best School"\'\\*$\?\*\*\*\*\*:)
+-rw-r--r-- 1 muhaymin muhaymin   801 Feb 13 12:23 iacta
+-rw-r--r-- 1 muhaymin muhaymin     0 Feb 13 16:48 ls_cwd_content
