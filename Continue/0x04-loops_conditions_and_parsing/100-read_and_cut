@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Write a Bash script that displays the content of the file /etc/passwd.
+# Your script should only display:
+# username; user id; Home directory path for the user
+
+i=0
+file="/etc/passwd"
+IFS=':'
+if test -f $file; then
+    line="$(wc -l < $file)"
+    fields=('zero' 'one' 'two' 'three' 'four' 'five' 'six')
+    while((i < line)); do
+        ((i++))
+        read -r -a fields < <(tail -n 1 <(head -n "$i" < $file))
+        echo "${fields[0]}:${fields[2]}:${fields[5]}"
+    done
+fi
