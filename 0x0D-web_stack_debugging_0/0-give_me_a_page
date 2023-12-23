@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 # run apache on docker container
+sudo ufw allow 80
+sudo ufw allow 8080
 sudo service apache2 start
