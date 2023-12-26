@@ -1,21 +1,20 @@
 #!/usr/bin/env bash
-# configures a new HAproxy as a load balancer
+# Fixes a web server to run Nginx as the nginx user listening on port 8080.
+sudo apt-get update
+sudo apt-get install haproxy -y
 
-# Install HAproxy on a server
-apt-get -y update
-apt-get -y install haproxy=1.6.\*
+# edit config file
+echo "frontend front_servers
+        bind *:80
+        mode http
+        default_backend servers
 
-# Configure haproxy configuration file to distribute requests using a roundrobin algorithm
-echo '
-frontend muhayminolalekan.tech
-        bind 0:80
-        default_backend web_servers
+    backend servers
+    balance roundrobin
+    server 301579-web-01 54.237.25.65:80 check
+    server 301579-web-02 52.87.230.182:80 check" | sudo tee -a /etc/haproxy/haproxy.cfg
 
-backend web_servers
-        balance roundrobin
-        server 301579-web-01 54.196.28.88:80
-        server 301579-web-02 34.201.174.193:80
-' >> /etc/haproxy/haproxy.cfg
+# enable haproxy to be started by init script
+echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
 
-# Restart HAproxy service
-service haproxy restart
+sudo service haproxy restart
